@@ -2,13 +2,15 @@ import React, {useState} from 'react'
 
 export default function TextForm(props) {
     const handleUpclick = () => {
-         setText ("HI MY NAME IS ISHITA")
+       
          let newText = text.toUpperCase();
+         setText(newText);
       console.log("Uppercase was clicked" + newText)
     }
     const handleLowclick = () => {
-        setText ("hi my name is ishita")
+        
         let newText = text.toLowerCase();
+        setText(newText);
         console.log("Lowercase was clicked" + newText)
     }
     const handleOnChange = (event) =>{
