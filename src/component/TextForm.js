@@ -22,7 +22,7 @@ export default function TextForm(props) {
 <div className="container">
      <h1>{props.heading}</h1> 
      <div className="mb-3">
-     <textarea className="form-control" id="myBox" value={text} onChange={handleOnChange} rows="6"></textarea>
+     <textarea className="form-control" id="myBox" value={text} onChange={handleOnChange} rows="6" style={{ backgroundColor: props.mode === 'dark' ? 'grey' : 'white', color: props.mode === 'dark' ? 'white' : 'black' }}></textarea>
      </div>
      <button className="btn btn-primary mx-1" onClick={handleUpclick}>Convert to Uppercase</button>
      <button className="btn btn-primary mx-1" onClick={handleLowclick}>Convert to Lowercase</button>
@@ -37,7 +37,7 @@ export default function TextForm(props) {
   <p> {text.split (" ").length} words and {text.length} characters</p>
   <p> {text.split (" ").length * 0.08} minutes read</p>
   <h2>Preview</h2>
-  <p>{text}</p>
+  <p>{text.length>0 ? text : "Enter text to preview it here"}"</p>
 </div>
 </>
   )
